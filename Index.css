@@ -1,0 +1,337 @@
+body{
+    overflow-x: hidden;
+}
+
+.subtitulo{
+    font-family: "Krub", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
+}
+.h1, .titulo{
+    font-family: "Gilda Display", serif;
+}
+.h2{
+    font-size: 1.1rem !important;
+    text-align: justify;
+}
+.h4{
+    font-size: 1rem !important;
+}
+
+.btnContacto{
+    padding: 4px 15px !important;
+    border: 1px solid #808080c2 !important;
+    border-radius: 99rem !important;
+    margin-top: 3px;
+    transition: 0.5s;
+}
+.btnContacto:hover, .btnContacto:focus{
+    background-color: #808080;
+    color: white !important;
+    box-shadow: 0 0px 10px 7px rgb(0 0 0 / 5%);
+}
+.btnContacto:hover a, .btnContacto:focus a{
+    color: white !important;
+}
+.imgPerfil{
+    border-radius: 99rem;
+    width: 20%;
+    box-shadow: 0 5px 30px 10px rgb(0 0 0 / 5%);
+}
+
+main{
+    padding-top: 55px;
+}
+.section {
+    padding-top: 55px; /* Ajusta según la altura del navbar */
+}
+
+
+/* Estilos para la barra de navegación fija */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    background-color: white;
+    box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.07);
+    transition: top 0.3s;
+}
+/* Estilo para el enlace activo en la barra de navegación */
+.navbar-nav a.nav-link.active {
+    border-bottom: 1px solid grey;
+}
+
+
+.carousel-control-prev, .carousel-control-next{
+    font-size: 2rem;
+    width: 10% !important;
+    opacity: 0.8 !important;
+}
+
+.carousel-control-prev{
+    background: linear-gradient(to right, #5050505c, transparent);
+    background-size: cover;
+    border-radius: 17px;
+}
+
+.carousel-control-next{
+    background: linear-gradient(to left, #5050505c, transparent);
+    background-size: cover;
+    border-radius: 17px;
+}
+.flex{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between; 
+    gap: 5%;
+}
+
+/* Estilos para la lista de educación */
+.education-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    position: relative; /* Hace que la posición sea relativa para poder posicionar el círculo */
+    padding-left: 40px; /* Espacio a la izquierda para la línea y el círculo */
+}
+
+.list-item:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #7e7e7e;
+}
+
+.list-item:after {
+    content: ''; /* Crea un pseudo-elemento para el círculo */
+    position: absolute;
+    top: 15px;
+    left: 1px; /* Posiciona el círculo a la izquierda de la línea vertical */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Hace que el elemento sea un círculo */
+    background-color: #7e7e7e; /* Color del círculo */
+    transform: translateX(-50%); /* Centra el círculo horizontalmente */
+}
+
+.subtitulo {
+    margin: 0; /* Elimina el margen predeterminado de los elementos h3 y h5 */
+    line-height: 1.5; /* Espacio entre líneas */
+}
+
+
+
+
+/* Estilos para el carousel */
+.carousel-inner img {
+    width: 100%;
+    height: 450px; /* Altura máxima del carousel */
+    border-radius: 17px;
+    object-fit: cover
+  }
+  
+  @media (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas (como dispositivos móviles) */
+    .carousel-inner img {
+      max-height: 300px; /* Reducir la altura máxima en pantallas más pequeñas */
+    }
+  }
+
+
+.flex .seccion{
+    box-shadow: 0 5px 30px 10px rgb(0 0 0 / 5%);
+    border: 1px solid #80808017;
+    border-radius: 10px;
+}
+  
+.seccion{
+    flex: 1;
+}
+
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    opacity: 1 !important;
+}
+
+
+
+footer{
+    background-color: #2a2a2a;
+    color: #ffffffe8 !important;
+}
+
+footer a{
+    color: #ffffffe8 !important;
+}
+
+footer a:hover i{
+    color: grey !important;
+}
+
+
+/* Estilos para el botón enviar */
+button[type="submit"] {
+    color: white; /* Color de texto inicial */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid white; /* Borde blanco de 1px */
+    border-radius: 99rem; /* Borde redondeado */
+    padding: 10px 20px; /* Padding interno */
+    cursor: pointer; /* Cursor de flecha al pasar por encima */
+    position: relative; /* Posición relativa para el pseudo-elemento */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    transition: color 0.3s; /* Transición para cambiar el color de las letras */
+
+    /* Definir un fondo de relleno progresivo (aún no visible) */
+    background-image: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 200% 100%; /* Doble tamaño del fondo (para la animación) */
+    background-position: 100% 0; /* Iniciar fondo fuera de la vista (a la derecha) */
+    transition: 0.5s;
+}
+
+/* Estilos al pasar el mouse por encima del botón */
+button[type="submit"]:hover {
+    color: gray; /* Cambiar color de texto a gris */
+    background-position: 0 0; /* Desplazar el fondo de derecha a izquierda */
+    
+}
+
+
+
+.form-control{
+    border-radius: 17px !important;
+    border: 0px solid !important;
+    padding: .4rem 1.5rem !important;
+}
+
+
+/* Estilos para el botón de detalles */
+.details-toggle {
+    cursor: pointer;
+}
+
+/* Estilos para el icono de flecha */
+.details-toggle i {
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el contenido de detalles */
+.details-content {
+    margin-top: 10px;
+}
+
+
+
+
+
+.project-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-container p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+@media (min-width: 769px) {
+    .imgPerfil {
+        width: 100%; /* Ajustar el ancho de la imagen al 100% */
+        max-width: 50% !important; /* Tamaño máximo de la imagen en pantallas pequeñas */
+        display: block; /* Asegurar que la imagen sea un bloque */
+        margin: 0 auto; /* Centrar horizontalmente la imagen */
+    }
+
+}
+/* Estilos para la sección "Sobre mí" */
+@media (min-width: 768px) {
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center; /* Centrar verticalmente los elementos */
+        gap: 20px; /* Espacio entre las columnas */
+    }
+
+    .imgPerfil {
+        width: 100%; /* Ajustar el ancho de la imagen al 100% */
+        max-width: 150px; /* Tamaño máximo de la imagen en pantallas pequeñas */
+        display: block; /* Asegurar que la imagen sea un bloque */
+        margin: 0 auto; /* Centrar horizontalmente la imagen */
+    }
+
+    .about-content {
+        text-align: center; /* Centrar el contenido de texto en pantallas más grandes */
+    }
+
+    .container {
+        max-width: 960px; /* Ancho máximo del contenedor en pantallas medianas y grandes */
+        width: 100%; /* Ancho completo del contenedor */
+        margin: 0 auto; /* Centrar horizontalmente el contenedor */
+        padding: 0 15px; /* Espacio interno del contenedor */
+    }
+
+    .seccion {
+        flex-basis: calc(50% - 20px); /* Ancho del 50% menos el espacio entre elementos */
+    }
+
+}
+
+@media (max-width: 767px) {
+    .flex {
+        flex-direction: column; /* Orientación de columna en pantallas pequeñas */
+        gap: 20px; /* Espacio entre los elementos */
+    }
+
+    .seccion {
+        flex-basis: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+
+    .imgPerfil {
+        width: 100%; /* Ajustar el ancho de la imagen al 100% */
+        max-width: 150px; /* Tamaño máximo de la imagen en pantallas pequeñas */
+        display: block; /* Asegurar que la imagen sea un bloque */
+        margin: 0 auto; /* Centrar horizontalmente la imagen */
+    }
+
+}
